@@ -1,0 +1,12 @@
+version: "3"
+services:
+  rabbit:
+    image: "rabbitmq:3-management"
+    environment:
+      RABBITMQ_ERLANG_COOKIE: "THIS_IS_TEST_ERL_COOCKIE"
+      RABBITMQ_DEFAULT_USER: "rmqhammer"
+      RABBITMQ_DEFAULT_PASS: "rmqhammer"
+      RABBITMQ_DEFAULT_VHOST: "/"
+    ports:
+      - "15672:15672"
+      - "5672:5672"
